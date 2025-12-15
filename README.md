@@ -44,7 +44,7 @@ README.md
 
 Each notebook can be opened and run directly in Google Colab using the embedded links.
 
-⸻
+---
 
 ## Modeling approaches
 
@@ -53,7 +53,7 @@ Three modeling strategies are explored:
 - *XGBoost*: A global machine-learning model trained across many store–item series using lag features and calendar signals. Hyperparameters are tuned via time-series-aware cross-validation.
 - *Prophet*: A baseline model applied to aggregated daily demand, providing an interpretable comparison with built-in trend and seasonality.
 
-⸻
+---
 
 ## Evaluation
 
@@ -65,7 +65,7 @@ Models are evaluated on a held-out forecast window (January–March 2014) using:
 
 MAPE is intentionally avoided, as retail demand often includes zero or near-zero sales, which leads to unstable percentage errors.
 
-⸻
+---
 
 ## Key takeaway
 
