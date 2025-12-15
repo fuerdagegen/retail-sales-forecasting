@@ -1,6 +1,6 @@
 # Retail sales forecasting
 
-This project explores demand forecasting for the Corporación Favorita grocery dataset, focusing on stores in the Guayas province.  
+This project explores demand forecasting for the *Corporación Favorita* grocery dataset, focusing on stores in the Guayas province.  
 The goal is to model daily product demand and compare different forecasting approaches, ranging from classical time-series models to modern machine-learning methods.
 
 The project follows an end-to-end workflow: data preparation, exploratory analysis, feature engineering, model training, evaluation, and comparison.
@@ -49,9 +49,9 @@ Each notebook can be opened and run directly in Google Colab using the embedded 
 ## Modeling approaches
 
 Three modeling strategies are explored:
-- *SARIMAX*: Applied to a single store–item time series as a proof of concept for classical statistical forecasting with exogenous variables.
-- *XGBoost*: A global machine-learning model trained across many store–item series using lag features and calendar signals. Hyperparameters are tuned via time-series-aware cross-validation.
-- *Prophet*: A baseline model applied to aggregated daily demand, providing an interpretable comparison with built-in trend and seasonality.
+- **SARIMAX**: Applied to a single store–item time series as a proof of concept for classical statistical forecasting with exogenous variables.
+- **XGBoost**: A global machine-learning model trained across many store–item series using lag features and calendar signals. Hyperparameters are tuned via time-series-aware cross-validation.
+- **Prophet**: A baseline model applied to aggregated daily demand, providing an interpretable comparison with built-in trend and seasonality.
 
 ---
 
