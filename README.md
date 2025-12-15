@@ -46,6 +46,33 @@ Each notebook can be opened and run directly in Google Colab using the embedded 
 
 ---
 
+## How to run
+
+The notebooks are designed to be run in Google Colab.
+
+All datasets are pulled automatically from remote sources (Google Drive links) inside the notebooks, so no manual data download is required. This keeps the project lightweight and easy to reproduce.
+
+1. Open any notebook from the `notebooks/` folder and use the embedded **Open in Colab** link.
+2. Mount Google Drive when prompted.
+3. Update file paths if needed to point to your local Drive location.
+4. Run the notebooks in the following order:
+
+   1. `data_prep.ipynb`  
+      Loads the raw data from remote sources, performs feature engineering and exploratory analysis, and exports the cleaned dataset.
+
+   2. `model_arima.ipynb`  
+      Fits a SARIMAX model to a single store–item time series as a classical baseline.
+
+   3. `model_xgboost.ipynb`  
+      Trains and evaluates the main XGBoost demand forecasting model using lag and calendar features.
+
+   4. `model_prophet.ipynb`  
+      Fits a Prophet baseline model on aggregated daily demand.
+
+Each notebook is self-contained and can be run independently once the prepared dataset is available.
+
+---
+
 ## Modeling approaches
 
 Three modeling strategies are explored:
