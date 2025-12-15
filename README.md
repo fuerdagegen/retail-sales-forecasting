@@ -49,22 +49,19 @@ Each notebook can be opened and run directly in Google Colab using the embedded 
 ## Modeling approaches
 
 Three modeling strategies are explored:
-- SARIMAX
-Applied to a single store–item time series as a proof of concept for classical statistical forecasting with exogenous variables.
-- XGBoost
-A global machine-learning model trained across many store–item series using lag features and calendar signals. Hyperparameters are tuned via time-series-aware cross-validation.
-- Prophet
-A baseline model applied to aggregated daily demand, providing an interpretable comparison with built-in trend and seasonality.
+- *SARIMAX*: Applied to a single store–item time series as a proof of concept for classical statistical forecasting with exogenous variables.
+- *XGBoost*: A global machine-learning model trained across many store–item series using lag features and calendar signals. Hyperparameters are tuned via time-series-aware cross-validation.
+- *Prophet*: A baseline model applied to aggregated daily demand, providing an interpretable comparison with built-in trend and seasonality.
 
 ⸻
 
 ## Evaluation
 
 Models are evaluated on a held-out forecast window (January–March 2014) using:
-	•	RMSE
-	•	MSE
-	•	MAE
-	•	R²
+- RMSE
+- MSE
+- MAE
+- R²
 
 MAPE is intentionally avoided, as retail demand often includes zero or near-zero sales, which leads to unstable percentage errors.
 
