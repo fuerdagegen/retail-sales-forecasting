@@ -37,10 +37,10 @@ Three forecasting approaches were tested:
 A SARIMAX model was applied to a single store–item pair as a proof of concept.  
 At this granularity, demand is extremely sparse, with many zero-sales days and occasional spikes.
 
-- RMSE: 1.48  
-- MSE:  2.19  
-- MAE:  0.75  
-- R²:   0.21  
+- RMSE: 1.53  
+- MSE:  2.34  
+- MAE:  0.98  
+- R²:   0.16  
 
 The model captures the overall level but struggles with sharp jumps, which is typical for classical statistical models on irregular retail series.  
 The key outcome is validation of the end-to-end forecasting workflow rather than predictive accuracy.
@@ -60,10 +60,10 @@ Aggregation smooths the series but does not eliminate volatility caused by promo
 XGBoost serves as the primary forecasting model, using lag features, calendar variables, and promotion indicators.  
 Hyperparameter tuning via randomized search further improved generalization.
 
-- RMSE: 1.38  
-- MSE:  1.91  
-- MAE:  0.06  
-- R²:   0.73  
+- RMSE: 1.33  
+- MSE:  1.78  
+- MAE:  0.10  
+- R²:   0.75  
 
 The model closely tracks weekly patterns and overall demand levels, even during sharper peaks.  
 The strong R² indicates that XGBoost explains a large share of the variability in daily demand.
@@ -87,9 +87,9 @@ The relatively wide confidence intervals reflect uncertainty inherent in retail 
 
 | Model            | RMSE     | MSE          | MAE    | R²   |
 |------------------|----------|--------------|--------|------|
-| SARIMAX          | 1.48     | 2.19         | 0.75   | 0.21 |
+| SARIMAX          | 1.53     | 2.34         | 0.98   | 0.16 |
 | SARIMAX (agg.)   | 1054.01  | 1,110,933.65 | 817.76 | 0.01 |
-| XGBoost          | 1.38     | 1.91         | 0.06   | 0.73 |
+| XGBoost          | 1.33     | 1.78         | 0.10   | 0.75 |
 | Prophet          | 904.31   | 817,772.78   | 673.12 | 0.27 |
 
 XGBoost clearly outperforms the other approaches, combining low error with strong explanatory power.  
